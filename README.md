@@ -13,6 +13,6 @@ For our digital portfolio assignment, you'll work on developing the following me
      fakeReviewStronger() from activity 4 (Note:  I, Hartman, have changed the name of this to distinguish it from the one in activity 3.  the lab manual simply calls it "fakeReview()" )
      
      Rubric
-     55% for completed Digital Portfolio entry, submitted on Canvas
-     Each additional feature (method) adds 15%, for a maximum of 100%
+     70% for Activities 1-4
+     30% for Activity 5
      

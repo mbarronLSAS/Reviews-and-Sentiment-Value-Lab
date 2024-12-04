@@ -1,9 +1,9 @@
+package lcas.project;
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
 import java.util.ArrayList;
-import java.util.Random;
-import java.io.*;
 
 /**
  * Class that contains helper methods for the Review Lab
@@ -15,11 +15,12 @@ public class Review {
   private static ArrayList<String> negAdjectives = new ArrayList<String>();
  
   
-  private static final String SPACE = " ";
+  //Update this with your Repository Name
+  private static final String ABSOLUTE_PATH = "/workspaces/REPOSITORY NAME/src/main/resources/";
   
   static{
     try {
-      Scanner input = new Scanner(new File("cleanSentiment.csv"));
+      Scanner input = new Scanner(new File(ABSOLUTE_PATH + "cleanSentiment.csv"));
       while(input.hasNextLine()){
         String[] temp = input.nextLine().split(",");
         sentiment.put(temp[0],Double.parseDouble(temp[1]));
@@ -34,7 +35,7 @@ public class Review {
   
   //read in the positive adjectives in postiveAdjectives.txt
      try {
-      Scanner input = new Scanner(new File("positiveAdjectives.txt"));
+      Scanner input = new Scanner(new File(ABSOLUTE_PATH + "positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
         System.out.println(temp);
@@ -48,7 +49,7 @@ public class Review {
  
   //read in the negative adjectives in negativeAdjectives.txt
      try {
-      Scanner input = new Scanner(new File("negativeAdjectives.txt"));
+      Scanner input = new Scanner(new File(ABSOLUTE_PATH + "negativeAdjectives.txt"));
       while(input.hasNextLine()){
         negAdjectives.add(input.nextLine().trim());
       }
@@ -67,7 +68,7 @@ public class Review {
   {  
     String temp = "";
     try {
-      Scanner input = new Scanner(new File(fileName));
+      Scanner input = new Scanner(new File(ABSOLUTE_PATH + fileName));
       
       //add 'words' in the file to the string, separated by a single space
       while(input.hasNext()){
